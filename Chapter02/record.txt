@@ -1,0 +1,40 @@
+《机器学习实战》Chapter02学习 2017.08.28 19：35
+1 numpy的安装
+    sudo apt-get install python-numpy
+2 numpy中array创建二位数组
+    group = array([[1.0, 1.1],
+                  [1.0, 1.0],
+                  [0.0, 0.0],
+                  [0.0, 0.1]])
+    错误示范：
+    group = array([1.0, 1.1],
+                  [1.0, 1.0],
+                  [0.0, 0.0],
+                  [0.0, 0.1])
+3 numpy中的tile函数
+    >>> diffMat = tile([0, 0], (1, 5))
+    >>> diffMat
+    array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
+    >>> diffMat = tile([0, 0], (4, 1))
+    >>> diffMat
+    array([[0, 0],
+           [0, 0],
+           [0, 0],
+           [0, 0]])
+    将前面的tile扩展成4行1列的矩阵
+    **这几天看OpenJPEG的代码时候正好接触到tile这个概念
+4 numpy中的sum函数
+    **sum函数只适用于array
+    >>> diffMat = array([[1, 2], [3, 4], [5, 6]])
+    >>> diffMat.sum(axis=1)
+    array([ 3,  7, 11])
+    >>> diffMat.sum(axis=0)
+    array([ 9, 12])
+    *axis=1表示行求和，axis=0表示列求和
+
+
+
+
+
+
+
